@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Booking";
+    Layout = "~/Views/shared/_Layout.cshtml";
+}
+
+<h1>Booking</h1>
+@if(ViewBag.QRCodeImage != null)
+{
+   <div class="alert alert-info">your booking has been successful</div> 
+   <h3>booking number is @ViewBag.BookingId</h3>
+   <img src="@ViewBag.QRCodeImage" alt="booking QR code" style="height:200px; width:200px;">
+}
+else
+{
+    <div class="alert alert-danger">somthing went wrong</div> 
+}
